@@ -1,0 +1,19 @@
+
+Para habilitar a criação de cluster minikube através da VM:
+
+1) No Windows desligue a VM que você irá configurar a opção "Enable Nested VT-x/AMD-V";
+   pode ser pelo comando 'vagrant halt'
+
+2) # PEGUE O NOME COMPLETO DA VM #
+Abra o VirtualBox -> Seleciona a VM -> Configurações -> Nome 
+obs.: Copie o nome completo, p.ex.: Terraform_terraform_1705153710777_98097
+
+3) Abra o CMD 'win+r cmd' e navegue até o local de instalação do virtualbox,
+normalmente aqui "C:\Program Files\Oracle\VirtualBox", e execute o comando
+'VBoxManage modifyvm <Nome da sua VM> --nested-hw-virt on' (sem aspas)
+
+4) Agora abra o VirtualBox. Aceite as opções de mudança na VM e habilite -> Configurações -> Sistema -> Processador.
+
+5) Ligue a VM 'vagrant up --no-provision'
+
+6) Siga para o passo 4 ou 5 do arquivo 'after_steps.txt'
