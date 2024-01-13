@@ -4,10 +4,10 @@
 # 1) ATIVAR/DESATIVAR RECURSOS DO WINDOWS            #   
 # 2) HABILITAR O HYPER-V                             #    
 #                                                    #   
-# 3) PARA HABILITAR A CONFIGURACAO DO *MINIKUBE* #   #    
-#    SERÁ NECESSARIO FAZER ISSO MANUALMENTE #         # 
-#    BASTA SEGUIR A DESCRICAO DO ARQUIVO TXT:         # 
-#    -> habilitar-minikube-VTxAMD-V.txt <-            #    
+# 3) PARA HABILITAR A CONFIGURACAO DO *MINIKUBE*     #    
+#    SERÁ NECESSARIO FAZER ISSO MANUALMENTE          # 
+#    BASTA SEGUIR A DESCRICAO DO ARQUIVO TXT:        # 
+#    -> habilitar-minikube-VTxAMD-V.txt <-           #    
 #                                                    #           
 # 4) POR FIM                                         #    
 #    Logar na VM e aplicar o comando abaixo:         #        
