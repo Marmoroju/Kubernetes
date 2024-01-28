@@ -1,6 +1,0 @@
-kubectl get pv
-find / -name my-pv-my-sts-0
-kubectl get pvc
-kubectl patch pv pvc-42bdd4c3-a97c-434e-88f8-aef64190f221 -p {spec: {persistentVolumeReclaimPolicy:Retain}}
-kubectl -it exec my-sts-0 -- bash
-kubectl delete pv pvc-42bdd4c3-a97c-434e-88f8-aef64190f221

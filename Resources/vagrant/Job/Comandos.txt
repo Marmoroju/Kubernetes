@@ -1,5 +1,0 @@
-kubectl api-versions
-kubectl logs my-job-bgw27
-kubectl delete jobs my-job
-for i in 1 2; do echo Luky number $i = $((1 + RANDOM % 70)); done
-kubectl describe job my-job

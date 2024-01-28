@@ -1,8 +1,0 @@
-kubectl config set-context --current --namespace=jupyter
-kubectl expose deployment jupyter-dp -n jupyter --type=NodePort --name=jupyter-svc
-minikube service jupyter-svc -n jupyter --url
-kubectl port-forward jupyter-dp-59f5558555-zv52s 8080:8888 -n jupyter
-KUBE_EDITOR="vi" kubectl edit service jupyter-svc
-kubectl port-forward jupyter-dp-59f5558555-zv52s --address 192.168.56.5 8080:8888
-kubectl set image deployment/jupyter-dp jupyter-container=jupyter/minimal-notebook:python-3.10
-kubectl rollout undo deployment/jupyter-dp

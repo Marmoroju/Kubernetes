@@ -1,7 +1,0 @@
-kubectl get cm 
-kubectl describe cm my-cm
-kubectl exec -it pod-cm-vol -- bash
-kubectl get events | grep Warning
-kubectl describe pod pod-cm-env | grep Warning
-env
-echo $LOGNAME
