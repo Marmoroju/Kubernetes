@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-01-28T18:26:24Z"
+  labels:
+    app: jupyter-app
+  name: jupyter-svc
+  namespace: jupyter
+  resourceVersion: "2849"
+  uid: 7eb305f6-0e19-4aae-b9a4-3bf24a3da810
+spec:
+  clusterIP: 10.111.60.51
+  clusterIPs:
+  - 10.111.60.51
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30000
+    port: 8888
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    app: jupyter-pods
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

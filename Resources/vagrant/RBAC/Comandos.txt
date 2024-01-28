@@ -1,0 +1,16 @@
+openssl genrsa -out auditor.key 2048
+openssl req -new -key auditor.key -out auditor.csr -subj "/CN=auditor/O=MyCompany"
+openssl x509 -req -in auditor.csr -CA ~/.minikube/ca.crt -CAkey ~/.minikube/ca.key -CAcreateserial -out auditor.crt -days 365
+kubectl config set-credentials auditor --client-certificate=auditor.crt --client-key=certificate/auditor.key
+kubectl config set-context auditor-context --cluster=minikube --user=auditor
+kubectl config view
+kubectl config current-context
+kubectl config use-context auditor-context
+kubectl auth can-i * * --all-namespaces
+kubectl config use-context minikube
+kubectl auth can-i * * --all-namespaces
+kubectl get roles
+kubectl get rolebinding
+kubectl describe role auditor-role
+kubectl config delete-context auditor-context
+kubectl config unset users.auditor

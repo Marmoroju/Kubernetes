@@ -1,0 +1,3 @@
+kubectl get endpoints
+kubectl get endpointslice
+kubectl run -it --image debian test-slice

@@ -1,0 +1,4 @@
+kubectl get all
+kubectl describe service frontend-service-nodeport
+kubectl delete service/frontend-service-nodeport
+kubectl delete pod/web-pod

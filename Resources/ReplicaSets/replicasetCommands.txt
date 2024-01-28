@@ -1,0 +1,4 @@
+kubectl scale replicasets frontend-rs --replicas=8
+kubectl get replicasets
+kubectl delete replicasets frontend-rs
+kubectl apply -f my-replicaset.yaml

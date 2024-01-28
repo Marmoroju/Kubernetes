@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-epslice-service
+  namespace: default
+spec:
+  ports:
+    - name: http
+      port: 80
+---
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: my-eps
+  namespace: default
+  labels:
+    kubernetes.io/service-name: my-epslice-service       
+addressType: IPv4
+endpoints:
+- addresses: 
+  - 10.244.0.91 #apache
+ports:    
+- name: http
+  port: 80
+  protocol: TCP
+---
+apiVersion: discovery.k8s.io/v1
+kind: EndpointSlice
+metadata:
+  name: my-eps-2
+  namespace: default
+  labels:
+    kubernetes.io/service-name: my-epslice-service
+addressType: IPv4
+endpoints:
+- addresses:
+  - 10.244.0.92  #nginx
+ports:
+- name: http
+  port: 80
+  protocol: TCP

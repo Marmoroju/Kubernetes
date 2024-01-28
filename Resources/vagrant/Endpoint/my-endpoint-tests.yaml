@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: my-endpoints-service
+  namespace: default
+subsets:
+  - addresses:
+      - ip: 10.244.0.89   #apache      
+      - ip: 10.244.0.88   #nginx
+    ports: 
+      - port: 80 
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-endpoints-service
+  namespace: default
+spec:
+  ports:      
+    - protocol: TCP
+      port: 80
+      targetPort: 80
