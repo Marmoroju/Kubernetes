@@ -18,6 +18,6 @@ recebera o erro abaixo:
     The connection to the server localhost:8080 was refused - 
     did you specify the right host or port?
 
-isso porque nao foi iniado cluster algum e para isso deve ser seguido os passos dos arquivos .txt.    
+isso porque NAO foi iniado cluster algum.
 
 
