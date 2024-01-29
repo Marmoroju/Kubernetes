@@ -18,6 +18,6 @@ recebera o erro abaixo:
     The connection to the server localhost:8080 was refused - 
     did you specify the right host or port?
 
-isso porque NAO foi iniado cluster algum.
+isso porque NAO foi iniado cluster algum. Sendo assim, voce devera iniciar o cluster pelo KIND ou MINIKUBE.
 
 
